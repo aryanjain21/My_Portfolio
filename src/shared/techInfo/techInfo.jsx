@@ -20,7 +20,7 @@ const TechInfo = (props) => {
             sx={{
               width: "220px",
               height: "220px",
-              p: "16px",
+              p: "11px",
               mr: "12px",
               mb: "16px",
               position: "relative",
@@ -60,13 +60,7 @@ const TechInfo = (props) => {
                 textAlign: "center",
               }}
             >
-              <Box sx={{
-                fontSize: '2rem',
-                mb: '11px',
-                color: '#2c2c2c',
-                zIndex: 10,
-              }}>{data.title}</Box>
-              <CustomButton btnText={"Documentation"} onClickHandler={() => {
+              <CustomButton btnText={data.title} onClickHandler={() => {
                 window?.open?.(data.link, '_blank');
               }} />
             </Box>

@@ -12,6 +12,7 @@ import Angular from "../../assets/images/angular.webp";
 import Node from "../../assets/images/nodejs.webp";
 import MongoDB from "../../assets/images/mongodb.webp";
 import StyledComponent from "../../assets/images/styled-component.webp";
+import Title from "../../shared/title/title";
 
 const Skills = () => {
   const techData = [
@@ -79,7 +80,8 @@ const Skills = () => {
   return (
     <Box
       sx={{
-        p: "24px",
+        px: "48px",
+        py: '60px'
       }}
     >
       {skills.map((data, index) => (
@@ -89,44 +91,7 @@ const Skills = () => {
             mb: "20px",
           }}
         >
-          <Box
-            sx={{
-              fontSize: "2.5rem",
-              lineHeight: "2rem",
-              mb: "24px",
-              color: "#08fdd8",
-
-              animationDuration: "1s",
-              animationFillMode: "both",
-              animationIterationCount: 1,
-              "@keyframes rubberBand": {
-                from: {
-                  transform: "scale3d(1, 1, 1)",
-                },
-
-                "25%": {
-                  transform: "scale3d(1, 0.95, 1)",
-                },
-
-                "50%": {
-                  transform: "scale3d(1, 0.85, 1)",
-                },
-
-                "75%": {
-                  transform: "scale3d(1, .95, 1.05)",
-                },
-
-                to: {
-                  transform: "scale3d(1, 1, 1)",
-                },
-              },
-              "&:hover": {
-                animationName: "rubberBand",
-              },
-            }}
-          >
-            {data.title}
-          </Box>
+          <Title title={data.title} />
           {data.title === "Learning" ? (
             <TechInfo techData={learningData} />
           ) : (

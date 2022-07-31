@@ -1,5 +1,7 @@
 import { Box } from "@mui/material";
 import { Route, Routes, Navigate } from 'react-router-dom';
+import About from "./components/about/about";
+import Contact from "./components/contact/contact";
 import Home from "./components/home/home";
 import SideNav from "./components/sideNav/sideNav";
 import Skills from "./components/skills/skills";
@@ -22,7 +24,9 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Navigate to='/home' />} />
           <Route exact path='home' element={<Home />} />
+          <Route exact path='about' element={<About />} />
           <Route exact path='skills' element={<Skills />} />
+          <Route exact path='contact' element={<Contact />} />
           <Route exact path='*' element={<Navigate to='/home' />} />
         </Routes>
       </Box>
