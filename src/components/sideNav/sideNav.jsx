@@ -5,11 +5,11 @@ import NavMenu from "../../shared/navMenu/navMenu";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-const SideNav = () => {
+const SideNav = (props) => {
   return (
     <Box
       sx={{
-        width: "150px",
+        width: {xs: '100%', md: "150px"},
         height: "100vh",
         backgroundColor: "#181818",
       }}
@@ -19,7 +19,7 @@ const SideNav = () => {
           backgroundColor: "#000",
         }}
       >
-        <LogoSection />
+        <LogoSection {...props} />
       </Box>
       <Box>
         <NavMenu />

@@ -10,16 +10,16 @@ const Contact = (props) => {
   return (
     <Box
       sx={{
-        p: "54px",
+        p: { xs: "36px 24px 24px", md: "54px" },
         height: '85vh',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center'
+        justifyContent: { xs: 'flex-start', md: 'center'}
       }}
     >
       <Box
         sx={{
-          width: "50%",
+          width: { xs: '100%', md: "50%" },
         }}
       >
         <Title title={"Contact Me"} />
@@ -49,7 +49,7 @@ const Contact = (props) => {
         ref={form}
         component={"form"}
         sx={{
-          width: "40%",
+          width: { xs: '100%', md: "50%" },
           mt: "24px",
         }}
       >
@@ -116,6 +116,9 @@ const Contact = (props) => {
           }}
         >
           <CustomButton
+            styles={{
+              p: '8px 16px'
+            }}
             btnText={"Send Message!"}
             onClickHandler={() => {
               if (

@@ -1,22 +1,38 @@
-import { Link } from "@mui/material";
-import { Box } from "@mui/system";
 import React from "react";
+import { Box, Link } from "@mui/material";
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
-const LogoSection = () => {
+const LogoSection = (props) => {
+
+  const { showMenu, setShowMenu } = props;
+
   return (
     <Box
       sx={{
         py: "11px",
+        position: 'relative',
       }}
     >
+      {showMenu && <Box 
+      onClick={() => setShowMenu(false)}
+      sx={{
+        display: { xs: 'block', md: 'none' },
+        position: 'absolute',
+        right: '16px'
+      }}>
+        <CloseOutlinedIcon sx={{
+          color: '#08fdd8',
+          cursor: 'pointer',
+        }} />
+      </Box>}
       <Link
-        href="/home"
+        href="/about"
         sx={{
           mb: "10px",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          textDecoration: 'none'
+          textDecoration: "none",
         }}
       >
         <Box
@@ -38,6 +54,18 @@ const LogoSection = () => {
         </Box>
       </Link>
       <Box
+        sx={{
+          fontSize: "1.1rem",
+          lineHeight: 1,
+          pt: '8px',
+          mb: '8px',
+          color: "#a5a5a5",
+          textAlign: 'center'
+        }}
+      >
+        Web Developer
+      </Box>
+      {/* <Box
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -113,7 +141,7 @@ const LogoSection = () => {
             Web Developer
           </Box>
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };

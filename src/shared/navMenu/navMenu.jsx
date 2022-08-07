@@ -13,7 +13,7 @@ const NavMenu = () => {
     },
     {
       title: "Work",
-      link: "/work",
+      link: "/works",
     },
     {
       title: "Contact",
@@ -27,7 +27,9 @@ const NavMenu = () => {
 
   return (
     <Box>
-      <List>
+      <List sx={{
+        pt: 0
+      }}>
         {navData.map((data, index) => (
           <ListItem
             key={index}

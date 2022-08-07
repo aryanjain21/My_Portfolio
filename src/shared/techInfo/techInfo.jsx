@@ -9,7 +9,7 @@ const TechInfo = (props) => {
     <Box
       sx={{
         display: "flex",
-        justifyContent: "flex-start",
+        justifyContent: { xs: 'space-between', sm: "flex-start" },
         flexWrap: "wrap",
       }}
     >
@@ -18,19 +18,19 @@ const TechInfo = (props) => {
           <Box
             key={index}
             sx={{
-              width: "220px",
-              height: "220px",
+              width: { xs: '125px', md: "210px"},
+              height: { xs: '125px', md: "210px"},
               p: "11px",
               mr: "12px",
               mb: "16px",
               position: "relative",
               backgroundColor: "#2c2c2c",
-              boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+              // boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
               "&:hover": {
                 backgroundColor: 'rgba(255, 255, 255, 0.5)',
                 img: {
                     opacity: 0.5,
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                    // backgroundColor: 'rgba(0, 0, 0, 0.5)',
                 },
                 '> div': {
                     opacity: 1,
@@ -38,10 +38,11 @@ const TechInfo = (props) => {
               },
             }}
           >
-            <img
-              style={{
-                width: "220px",
-                height: "220px",
+            <Box
+              component="img"
+              sx={{
+                width: { xs: '125px', md: "210px"},
+                height: { xs: '125px', md: "210px"},
                 opacity: 1,
                 transition: ".5s ease",
                 backfaceVisibility: "hidden",
@@ -60,7 +61,15 @@ const TechInfo = (props) => {
                 textAlign: "center",
               }}
             >
-              <CustomButton btnText={data.title} onClickHandler={() => {
+              <CustomButton btnText={'View Doc'}
+              styles={{
+                backgroundColor: '#08fdd8',
+                background: 'none',
+                borderRadius: '100%',
+                color: '#000',
+                p: { xs: '50px 25px', md: '75px 55px'}
+              }}
+              onClickHandler={() => {
                 window?.open?.(data.link, '_blank');
               }} />
             </Box>

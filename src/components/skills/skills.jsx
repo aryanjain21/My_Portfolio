@@ -5,6 +5,7 @@ import CSS from "../../assets/images/css.webp";
 import SASS from "../../assets/images/sass.webp";
 import JavaScript from "../../assets/images/javascript.webp";
 import Reactjs from "../../assets/images/react.webp";
+import Redux from "../../assets/images/redux.webp";
 import Material from "../../assets/images/material.webp";
 import Git from "../../assets/images/git.webp";
 import TechInfo from "../../shared/techInfo/techInfo";
@@ -40,6 +41,11 @@ const Skills = () => {
       image: Reactjs,
       title: "React",
       link: "https://reactjs.org/docs/getting-started.html",
+    },
+    {
+      image: Redux,
+      title: "Redux",
+      link: "https://redux.js.org/introduction/getting-started",
     },
     {
       image: Material,
@@ -80,8 +86,7 @@ const Skills = () => {
   return (
     <Box
       sx={{
-        px: "48px",
-        py: '60px'
+        p: { xs: "36px 24px 24px", md: "54px" },
       }}
     >
       {skills.map((data, index) => (

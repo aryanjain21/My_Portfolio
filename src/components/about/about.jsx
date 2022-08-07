@@ -8,79 +8,89 @@ const About = () => {
     <Box
       sx={{
         display: "flex",
-        justifyContent: "space-between",
+        flexDirection: { xs: "column", md: "row" },
+        justifyContent: { xs: "normal", md: "space-between" },
         alignItems: "center",
-        px: "54px",
-        py: "24px",
-        height: "90vh",
+        p: { xs: "36px 24px 24px", md: "54px" },
+        height: { xs: "100vh", sm: "90vh" },
       }}
     >
       <Box
         sx={{
-          width: "40%",
-          mr: "54px",
+          width: { xs: "100%", md: "40%" },
+          mr: { xs: 0, md: "54px" },
         }}
       >
         <Title title={"About Me"} />
         <Box
           component={"p"}
           sx={{
-            fontSize: "1.2rem",
+            fontSize: { xs: "1.2rem", sm: '1.3rem', md: "1.2rem" },
             lineHeight: 1.1,
             color: "#fff",
           }}
         >
-          I’m a Front-End Developer located in Pune. I have a serious passion
-          for UI effects, animations and creating intuitive, dynamic user
-          experiences.
+          Hi, I'm Aryan Jain.
+          Currently working as Frontend Engineer at Mindstix, Pune.
+        </Box>
+        <Box
+          component="p"
+          sx={{
+            fontSize: { xs: "1.2rem", sm: '1.3rem', md: "1.2rem" },
+            lineHeight: 1.1,
+            color: "#fff",
+          }}
+        >
+          I have a passion for development, animations and developing responsive website with
+          dynamic user experiences with functionality.
         </Box>
         <Box
           component={"p"}
           sx={{
-            fontSize: "1.2rem",
+            fontSize: { xs: "1.2rem", sm: '1.3rem', md: "1.2rem" },
             lineHeight: 1.1,
             color: "#fff",
           }}
         >
-          Well-organised person, problem solver, independent employee with high
-          attention to detail. Fan of MMA, outdoor activities, TV series and
-          English literature. A family person and father of one fractious boy &
-          one cute girl,
+          Interested in the fullstack development & freelancing as well and working on ambitious
+          projects with positive people. For contact me hit the below link
         </Box>
-        <Box
-          component={"p"}
+        <Link
+          href="/contact"
           sx={{
             fontSize: "1.2rem",
             lineHeight: 1.1,
-            color: "#fff",
+            color: "#08fdd8",
+            mt: "16px",
+            textDecoration: "none",
           }}
         >
-          Interested in the entire frontend spectrum and working on ambitious
-          projects with positive people.
-        </Box>
-        <Link 
-        href="/contact"
-        sx={{
-            fontSize: '1.2rem',
-            lineHeight: 1.1,
-            color: '#08fdd8',
-            mt: '16px',
-            textDecoration: 'none',
-        }}>Invite Me On &#9749;!! 	
+          Invite Me On &#9749;!!
         </Link>
       </Box>
       <Box
         sx={{
-          width: "40%",
-          height: "500px",
-          mx: "54px",
+          width: { xs: "100%", sm: '75%', lg: "50%", xl: "40%" },
+          height: { xs: "50%", sm: '56%', md: "500px" },
+          mx: { xs: 0, lg: "54px" },
+          mt: { xs: "24px", md: 0 },
           borderRadius: "100%",
           backgroundColor: "#08fdd8",
           overflow: "hidden",
           position: "relative",
         }}
       >
-        <img style={{ position: 'absolute', bottom: 0, right: 50 }} src={Aryan} alt="Aryan Jain" />
+        <Box
+          component="img"
+          sx={{
+            position: "absolute",
+            objectFit: { xs: 'cover', sm: 'normal' },
+            bottom: { xs: 'auto', sm: 0 },
+            right: { xs: -30, sm: 50 },
+          }}
+          src={Aryan}
+          alt="Aryan Jain"
+        />
       </Box>
     </Box>
   );
