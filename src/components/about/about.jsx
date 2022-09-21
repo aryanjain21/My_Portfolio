@@ -86,12 +86,12 @@ const About = () => {
       </Box>
       <Box
         sx={{
-          width: { xs: "100%", sm: "75%", lg: "50%", xl: "40%" },
-          height: { xs: "50%", sm: "56%", md: "500px" },
+          width: { xs: "80%", sm: "65%", lg: "50%", xl: "40%" },
+          height: { xs: "30%", sm: "56%", md: "500px" },
           mx: { xs: 0, lg: "54px" },
           mt: { xs: "24px", md: 0 },
-          borderRadius: "100%",
-          backgroundColor: "#08fdd8",
+          borderRadius: { xs: 0, sm: "100%"},
+          backgroundColor: { xs: 'none', sm: "lightblue"},
           overflow: "hidden",
           position: "relative",
         }}
@@ -102,7 +102,7 @@ const About = () => {
             position: "absolute",
             // objectFit: { xs: "cover", sm: "normal" },
             bottom: { xs: "auto", sm: 0 },
-            right: { xs: -30, sm: 50 },
+            right: { xs: 0, sm: 120, md: 90, lg: 110 },
           }}
           src={Aryan}
           alt="Aryan Jain"

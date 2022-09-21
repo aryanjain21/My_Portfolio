@@ -24,7 +24,7 @@ const Experience = () => {
             list: "Manually tested sites in various browsers & mobile devices to ensure cross-browser compatibility and responsiveness",
           },
           {
-            list: "Worked with teams of engineers, designers, and provide task completed/progress feedback & updating jira on daily basis",
+            list: "Worked with teams of engineers, designers, and provide task status & updating jira on daily basis",
           },
         ],
       },

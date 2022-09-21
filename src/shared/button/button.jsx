@@ -11,6 +11,10 @@ const CustomButton = (props) => {
 
   return (
     <Button sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontSize: styles && styles.fontSize ? styles.fontSize : '16px',
       maxWidth: styles && styles.maxWidth ? styles.maxWidth : '200px',
       height: styles && styles.height ? styles.height : '45px',
       color: styles && styles.color ? styles.color : '#08fdd8',

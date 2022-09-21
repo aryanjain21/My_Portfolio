@@ -67,6 +67,7 @@ const TechInfo = (props) => {
                 background: 'none',
                 borderRadius: '100%',
                 color: '#000',
+                fontSize: { xs: '12px', sm: '16px' },
                 p: { xs: '50px 25px', md: '75px 55px'}
               }}
               onClickHandler={() => {

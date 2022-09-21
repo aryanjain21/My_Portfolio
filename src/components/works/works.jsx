@@ -65,6 +65,37 @@ const Works = () => {
           { tech: "MongoDB" },
         ],
       },
+      {
+        title: "Quiz Master",
+        info: "Quiz Master is quiz contest with multi-level questions & provided score on scoreboard.",
+        link: "https://quizz-master.netlify.app",
+        githubLink: [
+          { link: 'https://github.com/aryanjain21/quizzFE' },
+          { link: 'https://github.com/aryanjain21/quizzBE' },
+        ],
+        techStack: [
+          { tech: "React" },
+          { tech: "Node" },
+          { tech: "Express" },
+          { tech: "MongoDB" },
+        ],
+      },
+      {
+        title: "Young Voice(Chat App)",
+        info: "Young Voice is signle & group chat web app with search & profile view & many more...",
+        link: "https://young-voice.netlify.app",
+        githubLink: [
+          { link: 'https://github.com/aryanjain21/chatAppFE' },
+          { link: 'https://github.com/aryanjain21/chatAppBE' },
+        ],
+        techStack: [
+          { tech: "React" },
+          { tech: "Node" },
+          { tech: "Express" },
+          { tech: "MongoDB" },
+          { tech: "Socket" },
+        ],
+      },
   ];
 
   return (
