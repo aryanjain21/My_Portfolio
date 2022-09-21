@@ -52,6 +52,7 @@ const TechInfo = (props) => {
             />
             <Box
               sx={{
+                display: {xs: 'none', md: 'flex' },
                 transition: ".5s ease",
                 opacity: 0,
                 position: "absolute",
